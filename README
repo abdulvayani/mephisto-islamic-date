@@ -1,0 +1,22 @@
+Islamic Date plugin for rails.
+
+INSTALLATION
+=============================================================
+
+To use this plugin, you have to go to Islamicfinder.org. The URL is http://www.islamicfinder.org/prayer_search.php#2.
+
+Once you generate the code for your specific area, get the url that the frame is pointing to and copy it. 
+
+In environment.rb, ABOVE Rails::Initializer.run do |config|, put:
+
+ISLAMIC_DATE_FILE = "[your URL]"
+
+Lastly, run the following code inside your applications directory:
+
+script/plugin install git://github.com:abdulvayani/mephisto_islamic_date.git
+
+Then, go into whatever liquid template you'd like to put it in put:
+
+{% islamic_date %}
+
+Released under the MIT license.
